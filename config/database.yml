@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: admin123 # Substitua pelo seu nome de usuário do PostgreSQL
+  password: admin123   # Substitua pela sua senha do PostgreSQL
+  host: localhost
+
+development:
+  <<: *default
+  database: IOT_development
+
+test:
+  <<: *default
+  database: IOT_test
+
+production:
+  <<: *default
+  database: IOT_production
+  username: admin123
+  password: admin123
